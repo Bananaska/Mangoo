@@ -3,10 +3,12 @@ using UnityEngine;
 public class HealthEnemy : MonoBehaviour
 {
     [SerializeField] private int _hpEnemy=5;
-
-    private void OnCollisionEnter(Collision collision)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("AtackPlayer"))
+        Debug.Log(other.gameObject.name);
+
+        if (other.gameObject.CompareTag("AtackPlayer"))
         {
             _hpEnemy -= 1;
             Debug.Log(_hpEnemy);
