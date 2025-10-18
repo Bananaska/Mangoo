@@ -6,6 +6,7 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;      // Иконка предмета
     public Button removeButton; // Кнопка удаления предмета
+    public Button useButton; 
 
     private Item item;      // Хранимый предмет
 
@@ -31,6 +32,11 @@ public class InventorySlot : MonoBehaviour
     public void OnRemoveButton()
     {
         Inventory.instance.Remove(item);
+    }
+
+    public void OnUseClicked()
+    {
+        
     }
 
     // Метод для использования предмета
