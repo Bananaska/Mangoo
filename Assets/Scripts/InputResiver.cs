@@ -11,7 +11,7 @@ public class InputResiver : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         Move = new Vector2(horizontalInput, 0);
 
-        JumpPresed = Input.GetButtonDown("Jump");
+        JumpPresed = Input.GetKeyDown(KeyCode.W);
 
         AtackPressed = Input.GetMouseButtonDown(0);
     }
