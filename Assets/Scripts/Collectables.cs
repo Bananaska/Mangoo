@@ -22,7 +22,7 @@ public class Collectables : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                Inventory.instance.Add(_item);
+                Inventory.instance.Add(_item);                
             }
         }
     }

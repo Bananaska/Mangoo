@@ -17,6 +17,7 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
         removeButton.interactable = true;
+        useButton.interactable = true;
     }
 
     // Метод для очистки слота
@@ -26,6 +27,7 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
+        useButton.interactable = false;
     }
 
     // Метод для удаления предмета по нажатию кнопки

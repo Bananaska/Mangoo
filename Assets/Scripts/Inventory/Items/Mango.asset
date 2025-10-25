@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd2c8ee2331fd54abbda79a0bd103d7, type: 3}
+  m_Script: {fileID: 11500000, guid: faba492124ead904ea5b0ed5bb955b35, type: 3}
   m_Name: Mango
   m_EditorClassIdentifier: 
   itemName: Mango
   icon: {fileID: 8496388564979372944, guid: d15769f176d0dd44ba917ec23e5e5402, type: 3}
-  isStackable: 1
+  isStackable: 0
+  _amount: 1

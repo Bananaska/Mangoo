@@ -4,9 +4,9 @@ using System.Collections;
 
 public class MeleeWeapon : MonoBehaviour, IWeapon
 {
-    [SerializeField] public int _plDamage = 1;
-    [SerializeField] private float _couldown = 1f;
-    [SerializeField] private float _atackTime = 0.2f;
+    [SerializeField] public int _plDamage;
+    [SerializeField] private float _couldown;
+    [SerializeField] private float _atackTime;
     [SerializeField] private GameObject _AtackField;
     [SerializeField] private bool _atack = false;
     [SerializeField] private bool _atackRecharging = false;
@@ -20,13 +20,16 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
             _atackRecharging = true;
             StartCoroutine(AtackCouldown());
             StartCoroutine(AtackingTime());
-            if (_atack == true)
-            {
-                _AtackField.SetActive(true);
-            }
+            
         }
     }
-   
+    private void Update()
+    {
+        if (_atack == true)
+        {
+            _AtackField.SetActive(true);
+        }
+    }
 
     private IEnumerator AtackingTime()
     {

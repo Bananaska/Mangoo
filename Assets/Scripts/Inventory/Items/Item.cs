@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 // ScriptableObject для описания базовых данных предмета
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
@@ -12,5 +13,6 @@ public class Item : ScriptableObject
     public virtual void Use()
     {
         Debug.Log($"Использован предмет: {itemName}");
+        //Inventory.instance.Add(_item);
     }
 }
