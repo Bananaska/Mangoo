@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,12 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory instance; // Синглтон для удобного доступа
 
+    public List<Item> items = new List<Item>(); // Список предметов в инвентаре
+    public int space = 20; // Максимальное количество предметов
+
+    // Делегат для уведомления об изменениях в инвентаре
+    public event Action OnItemChanged;
+ 
     private void Awake()
     {
         if (instance != null)
@@ -15,13 +22,6 @@ public class Inventory : MonoBehaviour
         }
         instance = this;
     }
-
-    public List<Item> items = new List<Item>(); // Список предметов в инвентаре
-    public int space = 20; // Максимальное количество предметов
-
-    // Делегат для уведомления об изменениях в инвентаре
-    public delegate void OnItemChanged();
-    public OnItemChanged onItemChangedCallback;
 
     // Метод для добавления предмета
     public bool Add(Item item)
@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
         }
 
         items.Add(item);
-        onItemChangedCallback?.Invoke(); // Уведомляем об изменениях
+        OnItemChanged?.Invoke(); // Уведомляем об изменениях
         return true;
     }
 
@@ -41,6 +41,6 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item)
     {
         items.Remove(item);
-        onItemChangedCallback?.Invoke(); // Уведомляем об изменениях
+        OnItemChanged?.Invoke(); // Уведомляем об изменениях
     }
 }

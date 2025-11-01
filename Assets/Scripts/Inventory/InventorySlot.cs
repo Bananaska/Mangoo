@@ -8,7 +8,7 @@ public class InventorySlot : MonoBehaviour
     public Button removeButton; // Кнопка удаления предмета
     public Button useButton; 
 
-    private Item item;      // Хранимый предмет
+    [SerializeField]private Item item;      // Хранимый предмет
 
     // Метод для добавления предмета в слот
     public void AddItem(Item newItem)
@@ -36,17 +36,14 @@ public class InventorySlot : MonoBehaviour
         Inventory.instance.Remove(item);
     }
 
-    public void OnUseClicked()
-    {
-        
-    }
-
     // Метод для использования предмета
     public void UseItem()
     {
         if (item != null)
         {
+           
             item.Use(); // Вызываем действие предмета
+            ClearSlot();
         }
     }
 }

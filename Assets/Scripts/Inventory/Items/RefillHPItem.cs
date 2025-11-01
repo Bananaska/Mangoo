@@ -9,6 +9,6 @@ public class RefillHPItem : Item
     public override void Use()
     {
         base.Use();
-        Health.instanse.Change(_amount);
+        Health.Instance.Change(_amount);
     }
 }

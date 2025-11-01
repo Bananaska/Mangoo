@@ -8,10 +8,14 @@ public class GroundChecker2D : MonoBehaviour
     [SerializeField] private float _radius;
     [SerializeField] private LayerMask _ground;
     public bool IsGrounded { get; private set; }
+
     private void Update()
     {
         Vector2 point = _point.position;
-        IsGrounded = Physics2D.OverlapCircle(point, _radius, _ground);
+        IsGrounded = Physics2D.OverlapCircle(point, _radius, _ground) != null;
     }
-    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = 
+    }
 }

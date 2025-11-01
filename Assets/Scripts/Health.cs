@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,16 +7,19 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] private int _maxHealth;
     [SerializeField] private int _health;
 
-    public static Health instanse;
+    public static Health Instance;
+
+    public event Action OnDealth;
+    public event Action<int> OnChanged;
 
     private void Awake()
     {
-      if(instanse != null)
+      if (Instance != null)
         {
             Debug.Log("Health уже существует");
             return;
         }
-        instanse = this;
+        Instance = this;
     }
 
 
@@ -30,11 +34,13 @@ public class Health : MonoBehaviour, IDamageable
         
         if (_health < 0)
         {
+            OnDealth?.Invoke();
             _health = 0;
         }
         if (_health > _maxHealth)
         {
             _health = _maxHealth;
         }
+        OnChanged?.Invoke(_health);
     }
 }

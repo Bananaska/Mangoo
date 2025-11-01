@@ -10,7 +10,7 @@ public class InventoryUI : MonoBehaviour
 
     void Start()
     {
-        inventory.onItemChangedCallback += UpdateUI; // Подписываемся на изменения инвентаря
+        inventory.OnItemChanged += UpdateUI; // Подписываемся на изменения инвентаря
         slots = itemsParent.GetComponentsInChildren<InventorySlot>(); // Получаем все слоты
     }
 

@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Mango
   icon: {fileID: 8496388564979372944, guid: d15769f176d0dd44ba917ec23e5e5402, type: 3}
   isStackable: 0
-  _amount: 1
+  _amount: 10

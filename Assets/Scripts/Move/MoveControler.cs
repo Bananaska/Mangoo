@@ -3,7 +3,7 @@ using UnityEngine;
 public class MoveControler : MonoBehaviour
 {
 
-    private InputResiver _inputresiver;
+    [SerializeField] private InputResiver _inputresiver;
     [SerializeField]private GroundChecker2D _groundChecker2D;
 
     [SerializeField] private float _speedX;
@@ -12,8 +12,8 @@ public class MoveControler : MonoBehaviour
     
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _inputresiver = GetComponent<InputResiver>();
+        //_rb = GetComponent<Rigidbody2D>();
+        //_inputresiver = GetComponent<InputResiver>();
     }
     private void MovePl()
     {
