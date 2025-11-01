@@ -16,6 +16,9 @@ public class GroundChecker2D : MonoBehaviour
     }
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = 
+        Gizmos.color = IsGrounded ? Color.green : Color.red;
+        Vector3 p =_point? _point.position  : transform.position;
+        Gizmos.DrawWireSphere(p, _radius);
+
     }
 }

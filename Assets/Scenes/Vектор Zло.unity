@@ -3294,7 +3294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _point: {fileID: 785848001}
-  _radius: 10
+  _radius: 0.1
   _ground:
     serializedVersion: 2
     m_Bits: 64
