@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faba492124ead904ea5b0ed5bb955b35, type: 3}
-  m_Name: Mango
+  m_Name: MangoTrololo
   m_EditorClassIdentifier: 
-  itemName: Mango
-  icon: {fileID: 8496388564979372944, guid: d15769f176d0dd44ba917ec23e5e5402, type: 3}
+  itemName: MangoTrolo
+  icon: {fileID: 5038453869865665030, guid: 7c0ba50c8c9ffdf44b37c69d073e295d, type: 3}
   isStackable: 0
-  _amount: 1
+  _amount: -1

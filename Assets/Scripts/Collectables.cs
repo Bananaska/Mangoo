@@ -25,5 +25,6 @@ public class Collectables : MonoBehaviour
                 Inventory.instance.Add(_item);                
             }
         }
+        Destroy(gameObject);
     }
 }

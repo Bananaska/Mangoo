@@ -18,8 +18,9 @@ public class Health : MonoBehaviour, IDamageable
         {
             Debug.Log("Health уже существует");
             return;
-        }
+       }
         Instance = this;
+        Health.Instance.Change(0); 
     }
 
 

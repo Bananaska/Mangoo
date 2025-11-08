@@ -16,6 +16,7 @@ TagManager:
   - UI
   - Ground
   - AtackEnemy
+  - Player
   - 
   - 
   - 
@@ -38,11 +39,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Boss
   m_SortingLayers:
   - name: Default
     uniqueID: 0
     locked: 0
   m_RenderingLayers:
   - Default
+  - Boss

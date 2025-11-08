@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d05ed70909d32d647808671d5e5b8b8a
+guid: 928fd9fee98499f48a89a196c61e1324
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -118870407587883096
-    second: png-klev-club-o9uk-p-mainkraft-blok-zemli-png-15_0
+      213: 3083236495703058692
+    second: 0___0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: png-klev-club-o9uk-p-mainkraft-blok-zemli-png-15_0
+      name: 0___0
       rect:
         serializedVersion: 2
-        x: 442
-        y: 442
-        width: 1405
-        height: 1405
+        x: 114
+        y: 49
+        width: 972
+        height: 1138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a71b6d7effa95ef0800000000000000
-      internalID: -118870407587883096
+      spriteID: 409a6e4d14bd9ca20800000000000000
+      internalID: 3083236495703058692
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      png-klev-club-o9uk-p-mainkraft-blok-zemli-png-15_0: -118870407587883096
+      0___0: 3083236495703058692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
