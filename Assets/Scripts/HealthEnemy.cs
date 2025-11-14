@@ -7,9 +7,9 @@ public class HealthEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerAttack"))
+        if (other.gameObject.CompareTag("AtackPlayer"));
         {
             _hpEnemy -= 1;
             Debug.Log(_hpEnemy);
