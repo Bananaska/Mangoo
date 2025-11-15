@@ -35,12 +35,13 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     {
         yield return new WaitForSeconds(_atackTime);
         _atack = false;
+        _AtackField.SetActive(false);
     }
     private IEnumerator AtackCouldown()
     {
         yield return new WaitForSeconds(_couldown);
         _atackRecharging = false;
-        _AtackField.SetActive(false);
+        
     }
 
 

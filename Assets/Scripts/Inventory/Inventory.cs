@@ -40,6 +40,7 @@ public class Inventory : MonoBehaviour
     // Метод для удаления предмета
     public void Remove(Item item)
     {
+        Debug.Log("Предмет удалён" + item);
         items.Remove(item);
         OnItemChanged?.Invoke(); // Уведомляем об изменениях
     }

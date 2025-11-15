@@ -23,11 +23,14 @@ public class InventorySlot : MonoBehaviour
     // Метод для очистки слота
     public void ClearSlot()
     {
+        
         item = null;
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
         useButton.interactable = false;
+        
+
     }
 
     // Метод для удаления предмета по нажатию кнопки
@@ -41,8 +44,9 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
-           
+          
             item.Use(); // Вызываем действие предмета
+            Inventory.instance.Remove(item);
             ClearSlot();
         }
     }

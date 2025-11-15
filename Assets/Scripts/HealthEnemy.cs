@@ -13,13 +13,11 @@ public class HealthEnemy : MonoBehaviour
         {
             _hpEnemy -= 1;
             Debug.Log(_hpEnemy);
+            if (_hpEnemy <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-    private void Update()
-    {
-        if(_hpEnemy<=0)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 }
