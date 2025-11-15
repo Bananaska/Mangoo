@@ -28,7 +28,7 @@ public class PatrulEnemy : MonoBehaviour
     private void SelectCurrentPoint()
     {
         if (_isChasing) return;
-        int pointIndex = Random.Range(0, _targetPoints.Length);
+        int pointIndex = UnityEngine.Random.Range(0, _targetPoints.Length);
         _currentPoint = _targetPoints[pointIndex];
     }
 
@@ -51,8 +51,12 @@ public class PatrulEnemy : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, -_direction * 90 + 90, 0);
     }
 
-    TryFindPlayer()
+    private void TryFindPlayer()
     {
-        _hit = Physics2D.Raycast(transform.position, transform.right * _viewDistance, Color.red);
+        //_hit = Physics2D.Raycast(transform.position, transform.right * _viewDistance, Color.red);
+    }
+    private void Move()
+    {
+        _rigidbody2D.linearVelocity = new Vector2(_direction * _curentSpeed, _rigidbody2D.linearVelocity.y);
     }
 }
