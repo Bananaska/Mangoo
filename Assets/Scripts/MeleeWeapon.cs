@@ -18,9 +18,11 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
         {
             _atack = true;
             _atackRecharging = true;
+            
             StartCoroutine(AtackCouldown());
             StartCoroutine(AtackingTime());
-            
+            SoundManager.Instance.PlayHitSound();
+
         }
     }
     private void Update()
