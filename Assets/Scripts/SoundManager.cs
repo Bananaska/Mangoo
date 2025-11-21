@@ -5,7 +5,9 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip deathEnemySound;
     [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip JumpSound;
 
     private AudioSource audioSource;
 
@@ -35,9 +37,17 @@ public class SoundManager : MonoBehaviour
         PlaySound(hitSound);
     }
 
+    public void PlayEnemyDeathSound()
+    {
+        PlaySound(deathEnemySound);
+    }
     public void PlayDeathSound()
     {
-        PlaySound(deathSound);
+        PlaySound(deathEnemySound);
+    }
+    public void PlayJumpSound()
+    {
+        PlaySound(deathEnemySound);
     }
 
     private void PlaySound(AudioClip clip)

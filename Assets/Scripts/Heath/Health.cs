@@ -20,9 +20,12 @@ public class Health : MonoBehaviour, IDamageable
             return;
        }
         Instance = this;
-        Health.Instance.Change(0); 
     }
+    private void Start()
+    {
+        Change(_maxHealth);
 
+    }
 
     private void Update()
     {

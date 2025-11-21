@@ -12,8 +12,8 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         _menuView.OnClickedButtonPlay += ToggleMenu;
-        _menuView.OnClickedButtonSettings += ToggleMenu;
-        _menuView.OnClickedButtonExit += ToggleMenu;
+        //_menuView.OnClickedButtonSettings += ToggleMenu;
+        //_menuView.OnClickedButtonExit += ToggleMenu;
         _toggleMenuButton.onClick.AddListener(ToggleMenu);
     }
 

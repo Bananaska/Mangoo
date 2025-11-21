@@ -19,7 +19,8 @@ public class HealthEnemy : MonoBehaviour
     {
         if(_hpEnemy<=0)
         {
-            Destroy(gameObject);
+            SoundManager.Instance.PlayEnemyDeathSound();
+            Destroy(gameObject);            
         }
     }
 }
