@@ -43,11 +43,11 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayDeathSound()
     {
-        PlaySound(deathEnemySound);
+        PlaySound(deathSound);
     }
     public void PlayJumpSound()
     {
-        PlaySound(deathEnemySound);
+        PlaySound(JumpSound);
     }
 
     private void PlaySound(AudioClip clip)

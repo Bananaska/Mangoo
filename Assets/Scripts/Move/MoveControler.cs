@@ -17,24 +17,26 @@ public class MoveControler : MonoBehaviour
     }
     private void MovePl()
     {
-
         float xMove = _inputresiver.Move.x;
+        transform.position += new Vector3(xMove * _speedX, 0) * Time.deltaTime;
+    }
 
-
-        if (_inputresiver.JumpPresed == true&& _groundChecker2D != null && _groundChecker2D.IsGrounded)
+    private void JumpPl()
+    {
+        if (_inputresiver.JumpPresed == true && _groundChecker2D != null && _groundChecker2D.IsGrounded)
         {
             _rb.AddForce(Vector2.up * _jumpHeight, ForceMode2D.Impulse);
+            SoundManager.Instance.PlayJumpSound();
         }
-
-        //float yMove = _inputresiver.Move.y;
-        transform.position += new Vector3(xMove * _speedX, 0) * Time.deltaTime;
-
-
     }
+    private void Update()
+    {
+        JumpPl();
+    }
+
     private void FixedUpdate()
     {
         MovePl();
-       
     }
 
 }
