@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel2 : MonoBehaviour
 {
-    //[SerializeField] private int _sceneNumber;
+    [SerializeField] private int sceneIndex = 1;
 
-  
-    public void LoadNewwScene()
+
+     void OnButtonNextCliked()
     {
 
-        SceneManager.LoadScene(1);
-        
+        SceneManager.LoadScene(sceneIndex);
+
     }
 }
