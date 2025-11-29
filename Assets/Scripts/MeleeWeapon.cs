@@ -18,9 +18,11 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
         {
             _atack = true;
             _atackRecharging = true;
+            
             StartCoroutine(AtackCouldown());
             StartCoroutine(AtackingTime());
-            
+            SoundManager.Instance.PlayHitSound();
+
         }
     }
     private void Update()
@@ -29,20 +31,22 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
         {
             _AtackField.SetActive(true);
         }
+        if (_atack == false)
+        {
+            _AtackField.SetActive(false);
+
+        }
     }
 
     private IEnumerator AtackingTime()
     {
         yield return new WaitForSeconds(_atackTime);
         _atack = false;
-        _AtackField.SetActive(false);
     }
     private IEnumerator AtackCouldown()
     {
         yield return new WaitForSeconds(_couldown);
         _atackRecharging = false;
-        
     }
-
 
 }
