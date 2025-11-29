@@ -32,6 +32,8 @@ public class MoveControler : MonoBehaviour
     private void Update()
     {
         JumpPl();
+        
+
     }
 
     private void FixedUpdate()

@@ -31,6 +31,11 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
         {
             _AtackField.SetActive(true);
         }
+        if (_atack == false)
+        {
+            _AtackField.SetActive(false);
+
+        }
     }
 
     private IEnumerator AtackingTime()
@@ -42,8 +47,6 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     {
         yield return new WaitForSeconds(_couldown);
         _atackRecharging = false;
-        _AtackField.SetActive(false);
     }
-
 
 }

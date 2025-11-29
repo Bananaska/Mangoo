@@ -9,7 +9,7 @@ public class Health : MonoBehaviour, IDamageable
 
     public static Health Instance;
 
-    public event Action OnDealth;
+    public event Action OnDeath;
     public event Action<int> OnChanged;
 
     private void Awake()
@@ -31,6 +31,11 @@ public class Health : MonoBehaviour, IDamageable
     {
        
     }
+    public void Death()
+    {
+        OnDeath?.Invoke();
+
+    }
 
     public void Change(int value)
     {
@@ -38,7 +43,7 @@ public class Health : MonoBehaviour, IDamageable
         
         if (_health < 0)
         {
-            OnDealth?.Invoke();
+            OnDeath?.Invoke();
             _health = 0;
         }
         if (_health > _maxHealth)
