@@ -43,6 +43,6 @@ public class AiControler : MonoBehaviour
     }
     private void Move()
     {
-        _rigidbody2D.velocity = new Vector2(_direction * _chasingSpeed, _rigidbody2D.velocity.y);
+        _rigidbody2D.linearVelocity = new Vector2(_direction * _chasingSpeed, _rigidbody2D.linearVelocity.y);
     }
 }

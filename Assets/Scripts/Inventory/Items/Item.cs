@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 // ScriptableObject для описания базовых данных предмета
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
