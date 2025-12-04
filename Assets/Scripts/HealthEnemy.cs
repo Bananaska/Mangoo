@@ -1,9 +1,23 @@
+using System;
+
 using UnityEngine;
 
 public class HealthEnemy : MonoBehaviour
 {
     [SerializeField] private int _hpEnemy;
     [SerializeField] private Sprite _deathPictureEnemy;
+
+    public event Action OnEnemyDamaged;
+
+    private void Start()
+    {
+        //AddListener(EnemyDamaged);
+    }
+
+    private void EnemyDamaged()
+    {
+
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

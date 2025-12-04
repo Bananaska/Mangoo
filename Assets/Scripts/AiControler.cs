@@ -3,6 +3,7 @@ using Random = UnityEngine.Random;
 
 public class AiControler : MonoBehaviour
 {
+    //Old
     [SerializeField] private Transform[] _targetPoints;
     [SerializeField] private float _chasingSpeed;
     [SerializeField] private float _walkingSpeed;
