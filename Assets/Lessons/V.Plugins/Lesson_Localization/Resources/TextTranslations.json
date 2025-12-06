@@ -1,0 +1,69 @@
+{
+  "entities": [
+    {
+      "key": "PLAY",
+      "translations": [
+        {
+          "language": "English",
+          "value": "PLAY"
+        },
+        {
+          "language": "Russian",
+          "value": "ИГРАТЬ"
+        }
+      ]
+    },
+    {
+      "key": "SETTINGS",
+      "translations": [
+        {
+          "language": "English",
+          "value": "SETTINGS"
+        },
+        {
+          "language": "Russian",
+          "value": "НАСТРОЙКИ"
+        }
+      ]
+    },
+    {
+      "key": "EXIT",
+      "translations": [
+        {
+          "language": "English",
+          "value": "EXIT"
+        },
+        {
+          "language": "Russian",
+          "value": "ВЫХОД"
+        }
+      ]
+    },
+    {
+      "key": "INFO",
+      "translations": [
+        {
+          "language": "English",
+          "value": "INFO"
+        },
+        {
+          "language": "Russian",
+          "value": "ИНФО"
+        }
+      ]
+    },
+    {
+      "key": "STARTGAME",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Start Game"
+        },
+        {
+          "language": "Russian",
+          "value": "Начать игру"
+        }
+      ]
+    }
+  ]
+}
