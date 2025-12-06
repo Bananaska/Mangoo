@@ -64,6 +64,19 @@
           "value": "Начать игру"
         }
       ]
+    },
+    {
+      "key": "Language",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Language"
+        },
+        {
+          "language": "Russian",
+          "value": "Язык"
+        }
+      ]
     }
   ]
 }
