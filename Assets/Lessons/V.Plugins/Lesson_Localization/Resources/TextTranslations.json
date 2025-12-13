@@ -77,6 +77,19 @@
           "value": "Язык"
         }
       ]
+    },
+    {
+      "key": "Volume",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Volume"
+        },
+        {
+          "language": "Russian",
+          "value": "Громкость"
+        }
+      ]
     }
   ]
 }

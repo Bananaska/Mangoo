@@ -8,20 +8,24 @@ public class MainMenuController : MonoBehaviour
 
     private void Awake()
     {
-        //_mainMenu.OnPlayButtonClicked+=
+        _mainMenu.OnPlayButtonClicked += PlayGame;
+        _mainMenu.OnChangedLevelButtonClicked += OpenLevelsPanel;
+        _mainMenu.OnSettingButtonClicked += OpenSettings;
+        _mainMenu.OnExitButtonClicked += ExitGame;
     }
 
     private void PlayGame()
     {
-
+        int nextSceneIndex = GameManager.Instance.GetCurrentLevelIndex();
+        SceneLoader.Instance.LoadSceneByIndex(nextSceneIndex);
     }
     private void OpenLevelsPanel()
     {
-
+        _levelsMenuView.gameObject.SetActive(true);
     }
     private void OpenSettings()
     {
-
+        _settingsView.gameObject.SetActive(true);
     }
 
     private void ExitGame()

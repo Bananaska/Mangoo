@@ -4,6 +4,8 @@ using YG;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader Instance { get; private set; }
+
     [SerializeField] private bool _loadToFirstScene = true;
 
     public void LoadNextScene()
@@ -15,9 +17,15 @@ public class SceneLoader : MonoBehaviour
         {
             nextIndex = 0;
         }
-        SceneManager.LoadScene(nextIndex);
-        
-        
+        SceneManager.LoadScene(nextIndex);  
+    }
+    public void LoadSceneByIndex(int sceneIndex)
+    {
+        if (sceneIndex >= SceneManager.sceneCountInBuildSettings)
+        {
+            sceneIndex = 0;
+        }
+        SceneManager.LoadScene(sceneIndex);
     }
     public void LoadThisScene()
     {

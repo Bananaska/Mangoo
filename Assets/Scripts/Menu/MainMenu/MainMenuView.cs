@@ -17,9 +17,9 @@ public class MainMenuView : MonoBehaviour
     private void Awake()
     {
         _playButton.onClick.AddListener(PlayButtonClicked);
-        _playButton.onClick.AddListener(ChangedLevelButtonClicked);
-        _playButton.onClick.AddListener(SettingButtonClicked);
-        _playButton.onClick.AddListener(ExitButtonClicked);
+        _changedLevelButton.onClick.AddListener(ChangedLevelButtonClicked);
+        _settingButton.onClick.AddListener(SettingButtonClicked);
+        _exitButton.onClick.AddListener(ExitButtonClicked);
     }
 
     private void PlayButtonClicked()

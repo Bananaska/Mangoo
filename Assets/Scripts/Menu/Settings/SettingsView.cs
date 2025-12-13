@@ -1,11 +1,12 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SettingsView : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
-    [SerializeField] private Dropdown _languageDropdown;
+    [SerializeField] private TMP_Dropdown _languageDropdown;
     [SerializeField] private Button _closeButton;
 
     public event Action<float> OnSliderChanged;
@@ -19,7 +20,7 @@ public class SettingsView : MonoBehaviour
        _closeButton.onClick.AddListener(SettingsCloseButtonClicked);
     }
 
-    private void SliderVolumeChanged(float value)
+    public void SliderVolumeChanged(float value)
     {
         OnSliderChanged?.Invoke(value);
     }
