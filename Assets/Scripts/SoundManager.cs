@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip deathEnemySound;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip JumpSound;
+    [SerializeField] private float _volume;
 
     private AudioSource audioSource;
 
@@ -32,6 +33,8 @@ public class SoundManager : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
     }
 
+    
+
     public void PlayHitSound()
     {
         PlaySound(hitSound);
@@ -53,6 +56,12 @@ public class SoundManager : MonoBehaviour
     private void PlaySound(AudioClip clip)
     {
         if (clip != null)
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip, _volume);
     }
+
+    public void VolumeChange(float volume)
+    {
+        _volume = volume;
+    }
+
 }

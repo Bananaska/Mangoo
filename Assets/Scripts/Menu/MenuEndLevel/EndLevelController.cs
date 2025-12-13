@@ -16,7 +16,7 @@ public class EndLevelController : MonoBehaviour
     private void LoadNextScene()
     {
         _sceneLoader.LoadNextScene();
-        YG2.InterstitialAdvShow();
+        //YG2.InterstitialAdvShow();
     }
     private void RestartScene()
     {
