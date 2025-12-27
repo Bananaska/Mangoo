@@ -148,13 +148,24 @@
       "translations": [
         {
           "language": "English",
-          "value": "W - Jump
-A,D - Movement"
+          "value": "W - Jump \n A,D - Moving"
         },
         {
           "language": "Russian",
-          "value": "W - Прыжок
-A,D - Передвижение"
+          "value": "W - Прыжок \n A,D - Перемещение"
+        }
+      ]
+    },
+    {
+      "key": "BOOTSTRAPTEXT",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Select a pill:\n Left - play \n Right - incredible, but also play"
+        },
+        {
+          "language": "Russian",
+          "value": "Выбери таблетку: \n Левая - играть \n Правая - невероятно, но тоже играть"
         }
       ]
     }

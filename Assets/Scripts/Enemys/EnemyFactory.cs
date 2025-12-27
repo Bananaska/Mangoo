@@ -1,48 +1,41 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-
-public class EnemyFactory
+namespace Teaching.Octopus
 {
-    //private readonly EnemyPool _enemyPool;
+	public enum EnemyType
+	{
+        Patrul,
+        Super,
+        Flyer
+    }
+	
+	public class EnemyFactory
+	{
+		private readonly EnemyPool _enemyPool;
 
-   // public EnemyFactory{}
+		public EnemyFactory(EnemyPool enemyPool)
+		{
+			_enemyPool = enemyPool;
+		}
 
+		public GameObject? Create(EnemyType type, Vector3 position)
+		{
+			var enemy = _enemyPool.Get(type);
 
+			if (enemy == null)
+			{
+				return null;
+			}
 
+			var enemyTransform = enemy.transform;
+			enemyTransform.SetPositionAndRotation(position, Quaternion.identity);
+			enemy.SetActive(true);
+			return enemy;
+		}
 
-
-
-
-
-
-   // private readonly Transform _parent;
-   //  private readonly Dictionary<EnemyType, GameObject?> _prefabs;
-
-    // public EnemyFactory(Transform parent, Dictionary<EnemyType, GameObject?> prefabs)
-    // {
-    //     _parent = parent;
-    //      _prefabs = prefabs;
-    // }
-
-    //public GameObject? Create(EnemyType type, Vector3 position)
-    //{
-    //    if (!_prefabs.TryGetValue(type, out var prefab) || prefab == null)
-    //    {
-    //        Debug.LogWarning($"[EnemyFactory] Префаб для {type} не назначен в инспекторе.");
-    //        return null;
-    //    }
-
-    //    var enemy = Object.Instantiate(prefab, position, Quaternion.identity, _parent);
-    //    enemy.name = $"Enemy_{type}";
-    //    return enemy;
-    //}
-
-}
-
-public enum EnemyType
-{
-    Normal,
-    Red,
-    Scared
+		public void Release(EnemyType type, GameObject enemy)
+		{
+			_enemyPool.Release(type, enemy);
+		}
+	}
 }
