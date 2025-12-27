@@ -37,7 +37,10 @@ public class SettingsView : MonoBehaviour
 
     }
 
-   // private void Input
+    public void InitDropdown(int optionindex)
+    {
+        _languageDropdown.SetValueWithoutNotify(optionindex);
+    }
 
     private void OnDestroy()
     {

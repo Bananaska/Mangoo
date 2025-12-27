@@ -28,6 +28,8 @@ namespace Lessons.Plugins.Lesson_Localization
             var initialLanguage = Application.systemLanguage;
             language = initialLanguage;
             OnLanguageChanged?.Invoke(initialLanguage);
+            DontDestroyOnLoad(gameObject);
+
         }
 
         private void OnDestroy()

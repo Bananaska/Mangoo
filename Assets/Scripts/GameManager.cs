@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         if (Instance == null)
         {
             Instance = this;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Score: " + _score);
     }
 
-    public void SetCurrentLevelIndex(int index)
+    public void GetCurrentLevelIndex(int index)
     {
         _currentLevelIndex = Mathf.Max(1, index);
         SaveManager.SaveLevelIndex(_currentLevelIndex);
@@ -36,5 +37,17 @@ public class GameManager : MonoBehaviour
     public int GetCurrentLevelIndex()
     {
         return _currentLevelIndex;
+    }
+
+    private void MarkLevelCompleted(int finishedLevelBuildIndex)
+    {
+        int unlockedLevelIndex = finishedLevelBuildIndex + 1;
+        if (unlockedLevelIndex >= _currentLevelIndex)
+        {
+            return;
+        }
+        _currentLevelIndex = unlockedLevelIndex;
+
+        SaveManager.SaveLevelIndex(_currentLevelIndex);
     }
 }

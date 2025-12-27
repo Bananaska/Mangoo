@@ -24,6 +24,7 @@ public class EndLevelController : MonoBehaviour
     }
     private void LoadMainMenuScene()
     {
+        _sceneLoader.LoadSceneByIndex(1);
 
     }
 }

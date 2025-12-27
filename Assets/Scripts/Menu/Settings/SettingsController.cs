@@ -6,10 +6,10 @@ public class SettingsController : MonoBehaviour
 {
     [SerializeField] private SettingsView _settingsView;
 
-    private void Awake()
+    private void Start()
     {
         int index = LanguageManager.Language == SystemLanguage.Russian ? 0 : 1;
-        _settingsView.SliderVolumeChanged(index);
+        _settingsView.InitDropdown(index);
         _settingsView.OnSliderChanged += VolumeChanged;
         _settingsView.OnMenuClose += CloseClicked;
         _settingsView.OnLanguageChanged += LanguageChanged;
@@ -26,9 +26,10 @@ public class SettingsController : MonoBehaviour
         _settingsView.gameObject.SetActive(false);
     }
 
-    private void LanguageChanged(int languageChange)
+    private void LanguageChanged(int index)
     {
-        SystemLanguage language = languageChange == 0? SystemLanguage.Russian : SystemLanguage.English;
+        SystemLanguage language = index == 0? SystemLanguage.Russian : SystemLanguage.English;
+        LanguageManager.Language = language;
     }
     private void OnDestroy()
     {

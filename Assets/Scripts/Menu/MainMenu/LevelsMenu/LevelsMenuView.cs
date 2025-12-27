@@ -19,7 +19,7 @@ public class LevelsMenuView : MonoBehaviour
 
         for (int i = 0; i < _buttons.Length; i++)
         {
-            int index = 1;
+            int index = i ;
             _buttons[i].onClick.AddListener(() => OnButtonLevelClick?.Invoke(index));
         }
 
@@ -28,15 +28,23 @@ public class LevelsMenuView : MonoBehaviour
 
     private void CloseLevelsPanel()
     {
+        Debug.Log("Close Button");
         OnButtonClose?.Invoke();
     }
-    public void SetActivMenuBetton(int currentLevel)
+    public void SetActiveLevelsButton(int currentLevel)
     {
-        int currentActivIndex = currentLevel -1;
+        int currentActivIndex = currentLevel; //-1;
 
         for(int i=0; i <= currentActivIndex; i++)
         {
             _buttons[i].interactable = i <= currentActivIndex;
         }
+    }
+
+    private void OnDestroy()
+    {
+        _buttonClose.onClick.RemoveListener(CloseLevelsPanel);
+        //_buttonClose.onClick.RemoveListener(SetActiveLevelsButton);
+
     }
 }

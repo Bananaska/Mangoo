@@ -66,7 +66,7 @@
       ]
     },
     {
-      "key": "Language",
+      "key": "LANGUAGE",
       "translations": [
         {
           "language": "English",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "key": "Volume",
+      "key": "VOLUME",
       "translations": [
         {
           "language": "English",
@@ -88,6 +88,73 @@
         {
           "language": "Russian",
           "value": "Громкость"
+        }
+      ]
+    },
+    {
+      "key": "SELECTLEVEL",
+      "translations": [
+        {
+          "language": "English",
+          "value": "SELECT LEVEL"
+        },
+        {
+          "language": "Russian",
+          "value": "ВЫБРАТЬ УРОВЕНЬ"
+        }
+      ]
+    },
+    {
+      "key": "CONTINUE",
+      "translations": [
+        {
+          "language": "English",
+          "value": "CONTINUE"
+        },
+        {
+          "language": "Russian",
+          "value": "Продолжить"
+        }
+      ]
+    },
+    {
+      "key": "KILLTHETRAININGDUMMY",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Kill the training dummy"
+        },
+        {
+          "language": "Russian",
+          "value": "Убей тренировочный манекен"
+        }
+      ]
+    },
+    {
+      "key": "ATACK",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Atack"
+        },
+        {
+          "language": "Russian",
+          "value": "Атака"
+        }
+      ]
+    },
+    {
+      "key": "WAD",
+      "translations": [
+        {
+          "language": "English",
+          "value": "W - Jump
+A,D - Movement"
+        },
+        {
+          "language": "Russian",
+          "value": "W - Прыжок
+A,D - Передвижение"
         }
       ]
     }

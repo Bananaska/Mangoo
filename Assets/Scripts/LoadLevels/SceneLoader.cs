@@ -6,8 +6,25 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance { get; private set; }
 
-    [SerializeField] private bool _loadToFirstScene = true;
+    [SerializeField] private bool _loopToFirstScene = true;
 
+    private void Awake()
+    {
+        Instance = this;
+
+        if (Instance != null)
+        {
+
+            Debug.Log("Инстанс тут");
+           // Instance = this;
+        }
+        //else
+        //{
+        //    Destroy(gameObject);
+       // }
+        DontDestroyOnLoad(gameObject);
+
+    }
     public void LoadNextScene()
     {
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
@@ -15,6 +32,11 @@ public class SceneLoader : MonoBehaviour
 
         if(nextIndex >= SceneManager.sceneCountInBuildSettings)
         {
+            if (_loopToFirstScene)
+            {
+                Debug.Log("Опасненько");
+                return;
+            }
             nextIndex = 0;
         }
         SceneManager.LoadScene(nextIndex);  

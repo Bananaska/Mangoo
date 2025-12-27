@@ -32,6 +32,7 @@ namespace Lessons.Plugins.Lesson_Localization
                 : Array.Empty<TextEntity>();
             
             textTranslator = new TextTranslator(entities);
+            DontDestroyOnLoad(gameObject);
         }
 
         private void OnDestroy()

@@ -16,8 +16,9 @@ public class MainMenuController : MonoBehaviour
 
     private void PlayGame()
     {
-        int nextSceneIndex = GameManager.Instance.GetCurrentLevelIndex();
+        int nextSceneIndex = GameManager.Instance.GetCurrentLevelIndex() +1;
         SceneLoader.Instance.LoadSceneByIndex(nextSceneIndex);
+
     }
     private void OpenLevelsPanel()
     {
